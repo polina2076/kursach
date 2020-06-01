@@ -1,67 +1,53 @@
 <?php
+	require_once"connection.php";
+	
+	if(isset($_POST['name'])){
+		$Name = $_POST['name'];
+	}
 
-require_once"connection.php";
-	header('content-type:text/html; charset=utf-8');
-	if(isset($_POST['Name'])){
-$Name = $_POST['Name'];
- if ( $Name=='')
-{ unset($Name);
-}}
-if(isset($_POST['Surname'])){
-$Surname = $_POST['Surname'];
- if ( $Surname=='')
-{ unset($Surname);
-}}
+	if(isset($_POST['surname'])){
+		$Surname = $_POST['surname'];
+	}
 
-if(isset($_POST['telephone'])){
-$telephone = $_POST['telephone'];
- if ( $telephone=='')
-{ unset($telephone);
-}}
+	if(isset($_POST['phone'])){
+		$phone = $_POST['phone'];
+	}
+
 	if(isset($_POST['login'])){
-$login = $_POST['login'];
- if ( $login=='')
-{ unset($login);
-}}
-if(isset($_POST['password']))
-{
-$password = $_POST['password'];
- if ( $password=='')
-{ unset($password);
-}}
-if (empty($login) or empty($password))
-{
-exit("Вы ввели не всю информацию!");
-}
+		$login = $_POST['login'];
+	}
 
-$login = stripslashes($login);
-$login = htmlspecialchars($login);
-$password = stripslashes($password);
-$password =htmlspecialchars($password);
+	if(isset($_POST['password']))
+	{
+		$password = $_POST['password'];
+	}
 
-$name = trim($Name);
-$surname = trim($Surname);
+	if (empty($login) or empty($password))
+	{
+		$data = array('error' => 'Вы не ввели логин или пароль.');
+		die( json_encode( $data ) );
+	}
 
-$telephon = trim($telephone);
-$login = trim($login);
+	$login = stripslashes($login);
+	$login = htmlspecialchars($login);
+	$password = stripslashes($password);
+	$password =htmlspecialchars($password);
 
-$result = mysqli_query($db,"select id from user where login='$login'");
-$myrow = mysqli_fetch_array($result);
-if(!empty($myrow['id'])){
-	
-	exit("Введеный вами логин уже зарегистрирован.");
-	
-	
-}
+	$result = mysqli_query($db,"SELECT id FROM user WHERE login='$login'");
+	$myrow = mysqli_fetch_array($result);
+	if(!empty($myrow['id'])){
+		$data = array('error' => 'Введеный вами логин уже зарегистрирован.');
+		die( json_encode( $data ) );
+	}
 
-$result2 = mysqli_query($db,"INSERT INTO user(Name,Surname,telephone,login,password) 
-values ('$Name','$Surname','$telephone','$login','$password')");
-if($result2=='true'){
-	require_once"index.php";
-}
-
-
-else{
-	echo"Ошибка регистрации";
-}
+	$result2 = mysqli_query($db,"INSERT INTO user(Name,Surname,telephone,login,password) 
+	values('$Name','$Surname','$phone','$login','$password')");
+	if($result2){
+		$data = array('success' => 'Ok');
+		die( json_encode( $data ) );
+	}
+	else{
+		$data = array('error' => 'Ошибка регистрации, попробуйте снова.');
+		die( json_encode( $data ) );
+	}
 ?>

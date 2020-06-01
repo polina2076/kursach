@@ -50,44 +50,6 @@ body {
 		float: left;
 	}
 		
-	
-/*.bg-1 {
-	width:1100px;
-	height:55px; 
-	background:#100000; 
-	}
-	
-.bg-2 {
-	width:1090px;
-	height:8px;
-	background:#F08080;
-	}
-
-.bg-3 {
-	width:890px;
-	height:8px;
-	background:#FFA500;
-	}
-	
-.bg-1 ul li {
-	float:left;
-	padding:0 2px 0 0;
-	}
-	
-.bg-1 ul li a {
-	display:block;
-	height:40px; 
-	padding:24px 27px 0px 27px;
-	color:#fff; 
-	text-decoration:none;
-	text-transform:uppercase;
-	}
-	
-.bg-1 ul li a:hover {
-	color#fff;
-	background:#F08080;
-	}*/
-	
 	*,
 *::after,
 *::before {
@@ -133,9 +95,11 @@ body {
     text-decoration: none;
     padding: 0 15px;
     line-height: 40px;
+    color: black;
 }
 .mainmenu ul li a:hover {
-    background-color: #D3BECB;
+    background: linear-gradient(#FBD1DB, #E9A8C0);
+    color: black;
 }
 
 #titlehead{
@@ -376,8 +340,14 @@ body {
 .logaut{
 	float:right;
 	padding: 5px;
-	margin: 5px;
+  margin: 5px;
+  background-color: #FFABC4;
+  border-radius: 15px;
 }	
+
+.logaut:hover{
+  background-color: #E98BC0;
+}
 
 .img{
 	
@@ -514,7 +484,7 @@ body {
     /* Styles */
     border: none; /* Remove the default border */
     border-radius: inherit;
-    background: linear-gradient(#F08080, #F08080);
+    background: linear-gradient(#FBD1DB, #E9A8C0);
     box-shadow: 
         inset 0 1px 0 rgba(255,255,255,0.3),
         0 1px 2px rgba(0,0,0,0.35),
@@ -1143,20 +1113,19 @@ header h1 {
   }
 }
 .product{
+  
 height: 30vh;
-border:10px;
+min-height: 500px;
 }
 
-.product:hover{
-box-shadow:
-inset 0 0 5px rgba(0,0,0,0.3),
-inset 0 3px 4px rgba(0,0,0,0.3);
-}
 
 .productImg{
+  width: 100%;
+  max-height: 250px;
+}
 
-width: 100%;
-max-height: 70%
+.productImg img{
+  object-fit: cover;
 }
 
 .productDes{
@@ -1190,4 +1159,249 @@ inset 0 3px 4px rgba(0,0,0,0.3);}
 	font-family:courier New;
 	font-size:20px;
 	
+}
+
+
+.news_add_btn{
+    padding: 15px;
+    background-color: #FFAAC3;
+    border-radius: 15px;
+    margin: 30px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.news_add_btn:hover{
+  background-color: #FF97B6;
+}
+
+.file_input{
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.text_news{
+  width: 300px;
+  border-radius: 15px;
+  min-height: 50px;
+  background-color: #FCDBE6;
+  padding-left: 15px;
+}
+
+#news_btn:hover{
+  background-color: #E98BC0;
+}
+
+#glasses_categories, #glasses_razdels{
+  width: 300px;
+  height: 50px;
+  background-color: #FCDBE6;
+  border-radius: 15px;
+  padding-left: 15px;
+  border: 2px solid gray;
+}
+
+#glasses_description, #news_value{
+  border: 2px solid gray;
+}
+
+.btn_cart{
+  width: 50px;
+  height: 50px;
+}
+
+.form_header{
+  float: right;
+  padding-right: 15px;
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart{
+  display: flex;
+  padding: 15px;
+}
+
+.cart_products{
+  flex: 60%;
+  padding: 15px;
+}
+
+.cart_product{
+  width: 100%;
+  height: 70px;
+  background-color: #FCDBE6;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.cart_remove_btn{
+  background: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.order{
+  flex: 40%;
+  background-color: #dfe4e7;
+  border: 1px solid #000;
+  min-height: 350px;
+  padding: 15px;
+}
+
+.order_row{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+}
+
+.order_row span{
+  font-size: 22px;
+}
+
+.order_btn{
+  font-size: 20px;
+  padding: 15px;
+  background-color: #FCDBE6;
+  text-align: center;
+}
+
+.order_btn:hover{
+  background-color: #F3BECF;
+}
+
+#empty_cart_text{
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 50px;
+  background: linear-gradient(#FBD1DB, #E9A8C0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.admin_panel{
+  display: flex;
+  width: 100%;
+}
+
+.admin_orders{
+  flex: 80%;
+  padding: 30px;
+  border-right: 0.5px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orders_loop{
+  flex: 70%;
+}
+
+.orders_btn{
+  flex: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.adminpanel_orders_btn{
+  flex: 0 0 50%;
+  height: 50px;
+  background-color: #FFAAC3;
+  border-radius: 15px;
+}
+
+.adminpanel_orders_btn:focus{
+  outline: none;
+}
+
+#success{
+  display: none;
+}
+
+.admin_buttons{
+  flex: 20%;
+}
+
+.order{
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  padding: 10px;
+  min-height: 100px;
+  font-size: 18px;
+  background-color: #DFEBF2;
+}
+
+.order_info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_products{
+  
+}
+
+.order_row{
+  display: flex;
+  justify-content: space-between;
+  border: 0.5px solid rgb(59, 58, 58);
+  background-color: #fff;
+  padding: 10px;
+}
+
+.order_user::first-letter{
+  text-transform: uppercase;
+}
+
+.sum, .admin_order_buttons{
+  background: none;
+  border: none;
+}
+
+.admin_order_btn{
+  margin: 0;
+}
+
+.razdel{
+  width: 100%;
+  height: 70px;
+  font-size: 18px;
+  color: #000;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 0 0;
+  text-align: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.razdel:hover{
+  cursor: pointer;
+  border-bottom: 0.5px solid #000;
+}
+
+.razdel a{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
+.razdel a:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+#product_btn:hover, #news_btn:hover{
+  background-color: #E98BC0;
 }

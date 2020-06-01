@@ -12,11 +12,11 @@
 					<li><i class="fa fa-envelope-o" aria-hidden="true">Optika55@bk.ru</i><li>
 				</ul>
 				<div class="time">
-				Время работы:<br>понедельник-пятница 11:00 - 20:00<br> Суббота 11:00 - 17:00				
+					Время работы:<br>понедельник-пятница 11:00 - 20:00<br> Суббота 11:00 - 17:00				
 				</div>
 				<div class="soz">
-				<a href="https://vk.com/optika_v_kuzminkah"><img style="width:30px" src="./images/vk.svg"></a>
-				<a href="https://www.instagram.com/optika_v_kuzminkah/"><img style="width:30px" src="./images/inst.svg"></a>
+					<a href="https://vk.com/optika_v_kuzminkah"><img style="width:30px" src="./images/vk.svg"></a>
+					<a href="https://www.instagram.com/optika_v_kuzminkah/"><img style="width:30px" src="./images/inst.svg"></a>
 				</div>
 			</div>
 		</div>
